@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="cat.png" type="image/x-icon" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #52BE80  ;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.catimg {
+  width: 100%;
+  padding:10px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  margin-top: 20px;
+  color: white;
+}
+.button {
+  margin: 40px; 
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  position: relative;
+}
+.explore {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  .catimg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="header">
+  <h1>Cat Doc</h1>
+  <p>We know a lot more about kitties these days than we used to know. The cat is a species that has many unique characteristics. A cat is NOT a small dog. When you want information about cats, their behavior, their illnesses, the medications that are safe for them, advice as to whether it's time to rush to the vet or not and much, much more, you want that information from an experienced, knowledgeable cat expert. And that is what we offer you.</p>
+</div>
+
+<div class="topnav">
+  <a href="Home.html">Home</a>
+  <a href="Contact_Us.html">ContactUs</a>
+  <a href="Gallery.html">Gallery</a>
+  <a href="Todolist.html">To Do List</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>E X P L O R E</h2>
+      <div class="catimg" style="height:550px;">
+        <img src="cat.jpg" height="550px" width="100%">
+      </div>
+      
+      <button class="button explore" onclick="document.location='explore/explore.html'">Explore</button>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Taking care of Kittens</h2>
+      <div class="fakeimg" style="height:100px;"><img src="https://wallpaper-house.com/data/out/9/wallpaper2you_326983.jpg" height="100px" width="100px"></div>
+      <p>Taking Care of Kittens can be simple when the Mother Cat is able to and does her job well, but that is not always the case. Also, even when Mom tries her best, there are things that you, as the human Mom, need to monitor to keep all safe and healthy.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>MyCatDoctor.Pvt.Ltd</h2>
+  <p>&copy;</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Card</title>
+	<style>
+		body
+		{
+			background-color: #f1f1f1;
+			margin: 0;
+			padding: 0;
+		}  
+		.card {
+
+			display:inline-block;
+			/*float:left;*/
+  			width:250px;
+  			height:250px;
+  			margin:10px;
+  			padding-top:5%;
+  			text-align:center;
+  			border: 1px solid grey;
+  			color:white;
+  			font-family: monospace;
+  			cursor:pointer;
+  			border: 1px solid;
+  			box-shadow: 5px 10px 8px #888888;
+  			margin-left: 30px;
+  			font-size: 20px;
+  			margin-top: 13%;
+		}
+		.card:hover {
+			/*background-color:rgba(100,100,100,0.5);*/
+  			color:black;
+  			transition: 0.5s ease all;
+  			-webkit-transition: 0.5s ease all;
+  		}
+  		*body {
+  			background-color: #f1f1f1;
+  		}
+  		
+  
+
+@media screen and (max-width: 768px){
+  			.card {
+  				float: none;
+  				text-align: center;
+
+  			}
+  		}
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js">
+</script>
+<body ng-app="Blocks">
+	<div ng-controller="AppCtrl" class="control">
+		<div ng-repeat="card in cards" class="card" style="background:{{card.Color}}" ng-init="myvar">
+			{{card.Problem}}
+			<br>
+			<br>
+			<br>
+			<br>
+			<br><br><br>
+			<a ng-href="{{card.myvar}}" style="text-decoration: none; color: red;"><button style="box-sizing: border-box; border-color: brown; border-radius: 6px; padding: 5px 30px; font-size: 30px; cursor: pointer;">Go</button></a>
+		</div>
+
+		<br/>
+		
+
+	</div>
+	
+<script>
+	var app = angular.module('Blocks', [])
+	app.controller("AppCtrl", function ($scope) {
+		$scope.cards =[
+		{
+			Problem: "Keeping Cats Healthy",
+			Color: "#1B5E20",
+			myvar: "blocks/KeepHealthy.html"
+		},
+		{
+			Problem: "Pet Isurance",
+			Color: "#900C3F",
+			myvar: "blocks/PetInsurance.html"
+
+		},
+		{
+			Problem: "Indoor or Outdoor",
+			Color: "#581845 ",
+			myvar: "blocks/Indoor_outdoor.html"
+
+
+		},
+		{
+			Problem: "Cat Health Questions",
+			Color: "#A93226 ",
+			myvar: "blocks/Cathealth.html"
+
+		},
+		{
+			Problem: "Holistic Cat Medicine",
+			Color: "#6B8F69",
+			myvar: "blocks/holisticmedicines.html"
+
+		},
+		] 
+	});
+</script>
+</body>
+</html>
